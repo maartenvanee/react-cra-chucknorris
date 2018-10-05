@@ -1,28 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import JokeList from "./Components/JokeList";
+import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    render() {
+        return (
+            <div className="chuckNorrisApp">
+                <h1>Chuck Norris Jokes</h1>
+                <button className="actionButton">Get new jokes</button>
+                <button className="actionButton">Start/Stop adding favorites</button>
+                <hr/>
+                <JokeList title="Jokes"/>
+                <JokeList title="Favorites"/>
+            </div>
+        );
+    }
 }
 
 export default App;
